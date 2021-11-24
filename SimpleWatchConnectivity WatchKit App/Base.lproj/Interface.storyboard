@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14268" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224"/>
+    </dependencies>
+    <scenes>
+        <!--MainInterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="MainInterfaceController" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                    <items>
+                        <button alignment="left" id="xiq-oY-ZAR">
+                            <group key="contentGroup" width="1" height="108" alignment="left" id="oNu-Qr-7VR">
+                                <items>
+                                    <label width="1" height="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="foZ-nr-7kp"/>
+                                </items>
+                                <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </group>
+                            <connections>
+                                <action selector="statusAction" destination="AgC-eL-Hgc" id="e3N-uu-47V"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" radius="0.0" id="eEP-ld-0Ut">
+                            <items>
+                                <button width="1" height="1" alignment="center" verticalAlignment="center" title="Command" id="k6l-Dc-fO2">
+                                    <connections>
+                                        <action selector="commandAction" destination="AgC-eL-Hgc" id="gVg-0V-6QU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="commandButton" destination="k6l-Dc-fO2" id="BEH-lz-Rcd"/>
+                        <outlet property="statusGroup" destination="oNu-Qr-7VR" id="VgB-dC-eqP"/>
+                        <outlet property="statusLabel" destination="foZ-nr-7kp" id="jmQ-tG-wds"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="9"/>
+        </scene>
+        <!--UserInfoTransfersController-->
+        <scene sceneID="rsH-jg-EL5">
+            <objects>
+                <controller identifier="UserInfoTransfersController" id="QDd-Zc-JYy" customClass="UserInfoTransfersController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="kbV-F2-lex">
+                            <items>
+                                <tableRow identifier="UserInfoTransferRowController" id="siu-DR-wsG" customClass="UserInfoTransferRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="c34-vd-4rw">
+                                        <items>
+                                            <label width="108" height="1" alignment="left" text="Label" id="dbH-Tb-Znh"/>
+                                            <label height="1" alignment="left" text="x" textAlignment="right" id="YKe-gO-LZv"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="deleteLabel" destination="YKe-gO-LZv" id="zXf-Xu-ptB"/>
+                                        <outlet property="titleLabel" destination="dbH-Tb-Znh" id="KYf-zg-6uT"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="DoneRowController" id="dnL-G1-mZj" customClass="DoneRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="110" alignment="left" id="oS1-Tv-l4P">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="No outstanding transfer now." textAlignment="center" numberOfLines="0" id="b2F-jM-anm"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="doneLabel" destination="b2F-jM-anm" id="jhe-Xb-f85"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="kbV-F2-lex" id="y0H-oV-oDf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="272" y="9.5"/>
+        </scene>
+        <!--FileTransfersController-->
+        <scene sceneID="uzR-KA-9N5">
+            <objects>
+                <controller identifier="FileTransfersController" id="dHn-6j-g7b" customClass="FileTransfersController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="x3c-SL-jgy">
+                            <items>
+                                <tableRow identifier="FileTransferRowController" id="z0V-Ai-cCk" customClass="FileTransferRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="50" alignment="left" layout="vertical" spacing="0.0" id="g85-36-Wt0">
+                                        <items>
+                                            <group width="1" height="0.69999999999999996" alignment="left" id="2ST-9r-ivS">
+                                                <items>
+                                                    <label width="108" height="1" alignment="left" verticalAlignment="bottom" text="Label" numberOfLines="0" id="M8v-k6-alI">
+                                                        <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                                    </label>
+                                                    <label height="1" alignment="left" verticalAlignment="bottom" text="x" textAlignment="right" id="XyT-TW-v1R"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" height="0.29999999999999999" alignment="left" id="PNI-Ez-8d8">
+                                                <items>
+                                                    <label width="1" height="1" alignment="left" alpha="0.80000000000000004" text="Label" id="Wwx-6Q-5UQ">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="6"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="progressLabel" destination="Wwx-6Q-5UQ" id="Ayc-tx-hOg"/>
+                                        <outlet property="titleLabel" destination="M8v-k6-alI" id="VWC-NY-jqd"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="DoneRowController" id="qKS-xU-GCx" customClass="DoneRowController" customModule="SimpleWatchConnectivity_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="97" alignment="left" id="Ifb-NJ-Z2o">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="No outstanding transfer now" textAlignment="center" numberOfLines="0" id="ylZ-CL-Ile"/>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="x3c-SL-jgy" id="zCr-qK-x0e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="530" y="10"/>
+        </scene>
+    </scenes>
+</document>
